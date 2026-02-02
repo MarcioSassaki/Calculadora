@@ -1,0 +1,42 @@
+print(" CALCULADORA ")
+
+#Pede o primeiro numero ao usuario
+num1 = float(input("Digite o primeiro número: "))
+
+#Mostra as opções para o usuario
+print("\nEscolha a operação:")
+print("+  Soma")
+print("-  Subtração")
+print("*  Multiplicação")
+print("/  Divisão")
+
+#Pede ao usuario escolher a operação
+operacao = input("Digite a operação: ")
+
+#Pede o segundo numero ao usuario
+num2 = float(input("Digite o segundo número: "))
+
+#Verifica qual ação o usuario escolheu para proceguir com a operação
+if operacao == "+":
+    resultado = num1 + num2
+
+elif operacao == "-":
+    resultado = num1 - num2
+
+elif operacao == "*":
+    resultado = num1 * num2
+
+elif operacao == "/":
+    if num2 != 0:
+        resultado = num1 / num2
+    else:
+        print("Não é possível dividir por zero!")
+        resultado = None
+
+else:
+    print("Operação inválida!")
+    resultado = None
+
+#Mostra o usuario o resultado do calculo
+if resultado is not None:
+    print("Resultado =", resultado)
